@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+}
+
+.log {
+    padding: 200px; /* Ajusta según sea necesario */
+    text-align: center;
+    background: #f9f9f9; /* Fondo para diferenciación */
+}
+
+
+
+.tarea{
+    padding: 200px; /* Ajusta según sea necesario */
+    text-align: center;
+    background: #f9f9f9; /* Fondo para diferenciación */
+}
+
+.respuesta {
+    width: 10%; /* Ajusta este valor según tus necesidades */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estilos generales para inputs y textarea */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estilo de focus para inputs y textarea */
+input[type="text"]:focus, textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* Estilo específico para textarea */
+textarea {
+    height: 150px;
+    resize: vertical; /* Permitir al usuario redimensionar verticalmente */
+}
+
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-content h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+}
+
+.footer-content p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.socials {
+    list-style: none;
+    padding: 0;
+}
+
+.socials li {
+    display: block;
+    margin: 10px 0;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #ccc;
+    margin: 5px 0;
+}
+
+.tabla{
+    text-align: center;
+    color: #030303;
+    border-color: #030303;
+    border: 2px solid #030303;
+}
+
+.eliminar{
+    background: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 200px;
+    align-items: center; /* Centrado vertical */
+    justify-content: center;
+}
+
+.tabla2 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla2 th, .tabla2 td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla2 tr:hover {
+    background-color: #f1f1f1;
+}
+
+.tabla2 th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.tabla2 td {
+    text-align: center;
+}
+
+.tabla2 .deleteTask {
+    color: #ff0000;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
