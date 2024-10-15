@@ -5,7 +5,6 @@ include('procesar.php');
 $db = new Database();
 $conn = $db->conn;
 
-
 $action = isset($_POST['action']) ? $_POST['action'] : (isset($_GET['action']) ? $_GET['action'] : 'listar');
 
 switch ($action) {
@@ -72,6 +71,29 @@ switch ($action) {
         }
         echo $output;
         exit();
+        break;
+    
+    case 'submit_login':
+        if ($_SERVER["REQUEST_METHOD"] == "POST"){
+            $usuario = new Usuario($conn);
+
+            $nombre = htmlspecialchars(trim($_POST['nombre']));
+            $contraseña = htmlspecialchars(trim($_POST['contraseña']));
+            echo $usuario->login($nombre, $contraseña);
+        }
+        
+        break;
+    
+    case 'submit_crear':
+        if ($_SERVER["REQUEST_METHOD"] == "POST"){
+            $usuario = new Usuario($conn);
+
+            $nombre = htmlspecialchars(trim($_POST['nombre']));
+            $contraseña = htmlspecialchars(trim($_POST['contraseña']));
+            $resultado = $usuario->crearUsuario($nombre, $contraseña);
+            echo $resultado ? "Bienvenido." : "Error al entar a sesión.";
+            header("Location: page.php");
+        }
         break;
 
     default:
