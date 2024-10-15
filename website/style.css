@@ -9,9 +9,11 @@ html, body {
 }
 
 body {
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Altura mínima del viewport */
+    margin: 0; /* Elimina márgenes predeterminados */
 }
 
 header {
@@ -93,8 +95,10 @@ footer {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    width: 100%; /* Asegura que ocupe todo el ancho de la página */
 }
 
+/* Contenido del footer */
 .footer-content {
     max-width: 1000px;
     margin: auto;

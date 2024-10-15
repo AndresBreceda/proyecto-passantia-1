@@ -39,7 +39,7 @@ class Usuario {
                 mysqli_stmt_fetch($stmt);
                 if ($contraseña === $db_contraseña) {
                     $_SESSION['nombre'] = $nombre;
-                    header("Location: page.php");
+                    header("Location:page.php");
                     exit();
                 } else {
                     return "Contraseña incorrecta.";

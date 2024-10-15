@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,18 +12,19 @@
     <div class="log">
         <h1>Entrar</h1><br>
         
-            <div class="input_log">
-            <form action="procesar.php" method="post">
-            <label>Nombre:</label>
-            <input type="text" name="nombre"><br>
-            <label>Contraseña:</label>
-            <input type="text" name="contraseña"><br>
-            </div>
-            <button type="submit" name="submit_login" class="btn btn-primary">Entrar</button>
+    <div class="input_log">
+                <form action="puente.php" method="post">
+                    <input type="hidden" name="action" value="submit_login">
+                    <label>Nombre:</label>
+                    <input type="text" name="nombre" required><br>
+                    <label>Contraseña:</label>
+                    <input type="password" name="contraseña" required><br>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </form>
 
-        </form>
-        <br><br>
-        <a href="crear.php" class="btn btn-primary">Crear Cuenta</a>
+                <br><br>
+                <a href="crear.php" class="btn btn-primary">Crear Cuenta</a>
+
     </div>
     <footer>
         <div class="footer-content">

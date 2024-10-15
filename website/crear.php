@@ -10,14 +10,14 @@
 <body>
 <header><h1> Administrador de tareas </h1></header>
     <div class="log">
-       <form action="procesar.php" method="post">
-       <label>Crear Nombre:</label>
-        <input type="text" name="nombre"><br>
+    <form action="puente.php" method="post">
+        <input type="hidden" name="action" value="submit_crear">
+        <label>Crear Nombre:</label>
+        <input type="text" name="nombre" required><br>
         <label>Crear Contraseña:</label>
-        <input type="text" name="contraseña"><br>
-        <button type="submit" name="submit_crear" class="btn btn-primary">Crear</button>
-
-       </form>
+        <input type="password" name="contraseña" required><br>
+        <button type="submit" class="btn btn-primary">Crear</button>
+    </form>
        <br>
         <a href="index.php" class="btn btn-primary">volver</a>
     </div>
